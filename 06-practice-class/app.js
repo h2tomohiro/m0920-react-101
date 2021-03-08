@@ -36,14 +36,16 @@ const data = [
 	},
 ]
 
-let category = data.map((result, index) => {
+const category = data.map((result) => {
 	return(
-		<Category key={index} data={result} />
+		<Category data={result} />
 )})
 
 ReactDOM.render(
 	<div className="row">
-		{category}
+		<ul className="cat-nav center-align">
+			{category}
+		</ul>
 	</div>,
 	document.getElementById('root')
 );
